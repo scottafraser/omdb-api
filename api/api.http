@@ -1,0 +1,12 @@
+@api_HostAddress = http://localhost:5104
+
+### Search for Movies
+GET {{api_HostAddress}}/api/movies/search?title=Inception&page=1
+Accept: application/json
+
+###
+
+### Fetch Movie Details
+GET {{api_HostAddress}}/api/movies/detail?id=tt1375666
+Accept: application/json
+
