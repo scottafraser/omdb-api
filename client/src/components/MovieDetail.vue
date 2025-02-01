@@ -3,6 +3,7 @@ import { onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useMovieStore } from '../stores/search'
 import { storeToRefs } from 'pinia'
+import popcorn from '../assets/popcorn.png'
 
 const route = useRoute()
 const router = useRouter()
@@ -33,7 +34,7 @@ onMounted(() => {
 
     <v-card v-if="movieDetail" class="mt-4">
       <v-img
-        :src="movieDetail.Poster !== 'N/A' ? movieDetail.Poster : 'https://via.placeholder.com/150'"
+        :src="movieDetail.Poster !== 'N/A' ? movieDetail.Poster : popcorn"
         height="400px"
         cover
       ></v-img>

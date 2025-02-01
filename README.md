@@ -166,6 +166,7 @@ This project is licensed under the **MIT License**.
 
 ## **🎯 Next Steps**
 
+- Add more optional search filters to take advantage of the api's functionality (type, genre)
 - Add frontend and backend tests
 - Add logging
 - Dockerize for simple set up

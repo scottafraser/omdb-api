@@ -3,6 +3,7 @@ import { storeToRefs } from 'pinia'
 import { useMovieStore } from '../stores/search'
 import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import popcorn from '../assets/popcorn.png'
 
 const movieStore = useMovieStore()
 const { query, movies, loading, error, currentPage, totalResults } = storeToRefs(movieStore)
@@ -51,7 +52,7 @@ const searchHandler = async () => {
           <v-col v-for="movie in movies" :key="movie.imdbID" cols="12" sm="6" md="4">
             <v-card @click="router.push(`/movie/${movie.imdbID}`)" class="clickable-card">
               <v-img
-                :src="movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/150'"
+                :src="movie.Poster !== 'N/A' ? movie.Poster : popcorn"
                 height="300px"
                 cover
               ></v-img>
